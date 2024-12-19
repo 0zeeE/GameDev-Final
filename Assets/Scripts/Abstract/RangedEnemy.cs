@@ -29,11 +29,16 @@ public abstract class RangedEnemy : Enemy
             rb.AddForce((weaponAttackPoint.transform.forward + randomTransform) * projectileSpeed, ForceMode.Impulse);
             rb.AddForce(weaponAttackPoint.transform.up * 1f, ForceMode.Impulse);
 
+            Destroy(rb.gameObject, 3);
+
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
 
     }
+
+
+   
 
     public void ResetAttack()
     {

@@ -28,6 +28,7 @@ public abstract class Enemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     public bool isEnemyMustStay = false; //Enemy sabit mi durmali ?
+    public bool isEnemyCanChase = true;
     public virtual void Start()
     {
         SetStartVariables();
@@ -60,7 +61,7 @@ public abstract class Enemy : MonoBehaviour
             {
                 Patrol();
             }
-            if (!playerInSightRange && playerInAttackRange)
+            if (playerInSightRange && !playerInAttackRange && isEnemyCanChase)
             {
                 ChasePlayer();
             }
