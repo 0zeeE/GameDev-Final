@@ -19,6 +19,8 @@ public class BowReleaseState : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<Bow>().ShootArrow();
+        animator.GetComponent<Bow>().DisplayArrow();
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &217708804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3838015360382374124, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+  m_PrefabInstance: {fileID: 6275804106870144258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &395265440
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +370,16 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: a73e59e4d269bfc408a0d7fd0d106816, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &764079160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3837332505758592406, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+  m_PrefabInstance: {fileID: 6275804106870144258}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &836503425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3838764455228461444, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+  m_PrefabInstance: {fileID: 6275804106870144258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &852474914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +1159,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.707
       objectReference: {fileID: 0}
+    - target: {fileID: 6362100548455444828, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+      propertyPath: arrowVisual.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362100548455444828, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+      propertyPath: arrowVisual.Array.data[0]
+      value: 
+      objectReference: {fileID: 764079160}
+    - target: {fileID: 6362100548455444828, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+      propertyPath: arrowVisual.Array.data[1]
+      value: 
+      objectReference: {fileID: 217708804}
+    - target: {fileID: 6362100548455444828, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+      propertyPath: arrowVisual.Array.data[2]
+      value: 
+      objectReference: {fileID: 836503425}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

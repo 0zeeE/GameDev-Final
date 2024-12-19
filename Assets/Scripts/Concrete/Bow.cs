@@ -9,7 +9,7 @@ public class Bow : MonoBehaviour
     [SerializeField] private Transform arrowSpawnPoint;
     public GameObject arrow;
     private Animator bowAnimator;
-    public GameObject arrowVisual;
+    public GameObject[] arrowVisual;
 
     void Start()
     {
@@ -22,12 +22,32 @@ public class Bow : MonoBehaviour
         
     }
 
+    IEnumerator ReloadState()
+    {
+        foreach (GameObject gm in arrowVisual)
+        {
+            gm.GetComponent<MeshRenderer>().enabled = false;
+        }
+
+        yield return new WaitForSeconds(0f);
+
+        foreach (GameObject gm in arrowVisual)
+        {
+            gm.GetComponent<MeshRenderer>().enabled = true;
+        }
+    }
+
     public void ShootArrow()
     {
         GameObject arrow_prefab = Instantiate(arrow, arrowSpawnPoint);
         arrow_prefab.GetComponent<Rigidbody>().AddForce(Vector3.forward * arrowSpeed, ForceMode.Impulse);
 
         Destroy(arrow_prefab, 10);
+    }
+
+    public void DisplayArrow()
+    {
+        StartCoroutine(ReloadState());
     }
 
     
