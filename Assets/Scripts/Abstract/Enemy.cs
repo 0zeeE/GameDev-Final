@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
+    public float MaxHealth = 100;
+    [SerializeField] private float currentHealth;
     public bool isDead = false;
     public float moveSpeed = 10f;
     public Animator enemyAnim;
@@ -48,6 +50,7 @@ public abstract class Enemy : MonoBehaviour
         }
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        currentHealth = MaxHealth;
     }
 
     public void CheckPlayerState()
@@ -108,7 +111,18 @@ public abstract class Enemy : MonoBehaviour
     public virtual void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        
 
+    }
+
+    public virtual void TakeDamage(float amount)
+    {
+        currentHealth -= amount;
+
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
     //Bu metot her bir enemy tipi icin tamamlanmasi gerekmekte. Melee ve Ranged Karakterler vardýr cunku.
