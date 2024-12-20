@@ -24,6 +24,11 @@ public class Arrow : MonoBehaviour
             other.GetComponent<Enemy>().TakeDamage(arrowDamage);
             Destroy(this.gameObject);
         }
+        if(other.tag == "Breakable")
+        {
+            other.GetComponent<BreakableObject>().TakeDamage();
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
