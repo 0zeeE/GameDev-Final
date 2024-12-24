@@ -47,6 +47,7 @@ public class Bow : MonoBehaviour
     public void ShootArrow()
     {
         GameObject arrow_prefab = Instantiate(arrow, arrowSpawnPoint);
+        arrow_prefab.transform.SetParent(null);
         arrow_prefab.GetComponent<Rigidbody>().AddForce(arrowSpawnPoint.forward * arrowSpeed, ForceMode.Impulse);
 
         Destroy(arrow_prefab, 10);

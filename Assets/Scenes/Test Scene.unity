@@ -1260,6 +1260,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295902686}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1309391163 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3080668750562915389, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+  m_PrefabInstance: {fileID: 6275804106870144258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1580827358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -1899,6 +1904,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.707
       objectReference: {fileID: 0}
+    - target: {fileID: 6362100548455444828, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
+      propertyPath: arrowSpawnPoint
+      value: 
+      objectReference: {fileID: 1309391163}
     - target: {fileID: 6362100548455444828, guid: 0830600c563d403489df39209aa0ce8c, type: 3}
       propertyPath: arrowVisual.Array.size
       value: 2
