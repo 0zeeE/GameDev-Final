@@ -130,5 +130,10 @@ public abstract class Enemy : MonoBehaviour
 
     public abstract void Die();
 
+    public virtual void ResetAttack()
+    {
+        alreadyAttacked = false;
+    }
+
 
 }

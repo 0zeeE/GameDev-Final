@@ -13,13 +13,20 @@ public class Bow : MonoBehaviour
 
     void Start()
     {
-        
+        bowAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButton(0))
+        {
+            bowAnimator.SetBool("Aim",true);
+        }
+        else
+        {
+            bowAnimator.SetBool("Aim", false);
+        }
     }
 
     IEnumerator ReloadState()

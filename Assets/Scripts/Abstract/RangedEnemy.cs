@@ -40,8 +40,5 @@ public abstract class RangedEnemy : Enemy
 
    
 
-    public void ResetAttack()
-    {
-        alreadyAttacked = false;
-    }
+    
 }

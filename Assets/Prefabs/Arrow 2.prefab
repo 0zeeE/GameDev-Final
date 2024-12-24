@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 6079120383667720142}
   - component: {fileID: 3169114045541153782}
   - component: {fileID: 6919807206034525301}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Arrow 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0

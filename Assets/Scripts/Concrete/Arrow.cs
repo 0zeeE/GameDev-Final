@@ -34,6 +34,7 @@ public class Arrow : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        gameObject.GetComponent<Collider>().isTrigger = false;
     }
 
 }
