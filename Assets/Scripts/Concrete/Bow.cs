@@ -31,9 +31,7 @@ public class Bow : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.B))
         {
-            isBowActive = !isBowActive;
-            bowAnimator.enabled = !bowAnimator.enabled;
-            bowAnimator.Play("Idle");
+            BowSwitch();
         }
     }
 
@@ -70,7 +68,22 @@ public class Bow : MonoBehaviour
         StartCoroutine(ReloadState());
     }
 
-    
+    public void BowSwitch()
+    {
+        isBowActive = !isBowActive;
+        bowAnimator.enabled = !bowAnimator.enabled;
+        bowAnimator.Play("Idle");
+    }
 
-    
+    public void BowSwitch(bool param)
+    {
+        
+        isBowActive = param;
+        bowAnimator.enabled = param;
+        bowAnimator.Play("Idle");
+    }
+
+
+
+
 }
