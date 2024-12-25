@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100;
     private float currentHealth;
+    public float damageReduction = 0f; //yuzdelik olarak dusun
     private FirstPersonController fpsController;
     private Rigidbody rb;
     public bool isDead = false;
@@ -27,7 +28,19 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
+        float reducedDamage = 0;
+
+        if(damageReduction > 0)
+        {
+            reducedDamage = damage * (1 - (1 / damageReduction));
+
+        }
+        else
+        {
+            reducedDamage = damage;
+        }
+
+        currentHealth -= reducedDamage;
         
         if(currentHealth <= 0)
         {
