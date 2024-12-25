@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8717853781471534761}
   - component: {fileID: 7879979389732068506}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Arrowhead_place
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 3657639466271119627}
   - component: {fileID: 6986192234768052016}
   - component: {fileID: 1425553154073007161}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Arrow_stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 7944253026244470267}
   - component: {fileID: 2238305345464842663}
   - component: {fileID: 6099754779114273205}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: arrowhead
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MergenKut : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool mergenKutEnabled = false; // Mergen Kut'unun calismasi icin bu kut'a sahip olmali.
     [SerializeField] private Camera cam;
     public Animator eyeAnimator;
     public LayerMask defaultLayers;
@@ -13,15 +13,19 @@ public class MergenKut : MonoBehaviour
     public float skillDuration = 4f;
     public float skillCooldown = 5f;
 
+    
+
+
     void Start()
     {
-        
+        cam = GetComponentInChildren<Camera>();
+        eyeAnimator = GameObject.FindGameObjectWithTag("EyeLids").GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) && mergenKutEnabled == true)
         {
             Skill();
         }
