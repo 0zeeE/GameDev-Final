@@ -19,10 +19,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            Die();
-        }
+        //if (Input.GetKeyDown(KeyCode.M))
+        //{
+        //    Die();
+        //}
     }
 
     public void TakeDamage(float damage)
