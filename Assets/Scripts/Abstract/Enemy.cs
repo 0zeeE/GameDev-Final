@@ -12,6 +12,8 @@ public abstract class Enemy : MonoBehaviour
     public float moveSpeed = 10f;
     public Animator enemyAnim;
     public Transform player;
+    public bool isCloseToPlayer;
+    public GameObject enemyWeapon;
 
     //Enemy Navigation
     public NavMeshAgent agent;
