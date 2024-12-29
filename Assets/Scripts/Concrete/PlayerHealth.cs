@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100;
-    private float currentHealth;
+    [SerializeField] private float currentHealth;
     public float damageReduction = 0f; //yuzdelik olarak dusun
     private FirstPersonController fpsController;
     private Rigidbody rb;
@@ -66,5 +66,14 @@ public class PlayerHealth : MonoBehaviour
         fpsController.enabled = false;
         rb.constraints = RigidbodyConstraints.None;
         //GameManager Kodu buraya gelecek.
+    }
+
+    public void AddHealth(float amount)
+    {
+        currentHealth += amount;
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
     }
 }

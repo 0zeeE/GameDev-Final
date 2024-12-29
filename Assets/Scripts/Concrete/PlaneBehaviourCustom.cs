@@ -29,6 +29,7 @@ public class PlaneBehaviourCustom : CutterBehaviour
                 else
                 {
                     root.GetComponent<Enemy>().TakeDamage(kilic.swordDamage);
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>().AddHealth(kilic.lifeStealAmount);
                 }
                 
             }

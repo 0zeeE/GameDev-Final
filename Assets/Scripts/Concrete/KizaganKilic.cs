@@ -5,6 +5,7 @@ using DynamicMeshCutter;
 public class KizaganKilic : MonoBehaviour
 {
     [SerializeField] private Animator swordAnim;
+    public float lifeStealAmount = 10f;
     public float swordDamage = 20f;
     private void Start()
     {

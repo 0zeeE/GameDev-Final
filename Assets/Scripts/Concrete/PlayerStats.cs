@@ -10,7 +10,7 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private PlayerHealth playerHp;
     [SerializeField] private FirstPersonController fpsController;
-    void Start()
+    void Awake()
     {
         mergenKut = GetComponent<MergenKut>();
         kizaganKut = GetComponent<KizaganKut>();

@@ -2109,6 +2109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordAnim: {fileID: 0}
+  lifeStealAmount: 10
   swordDamage: 20
 --- !u!1 &1580827358 stripped
 GameObject:
@@ -2128,6 +2129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   damageReduction: 0
   isDead: 0
 --- !u!114 &1580827372
@@ -2200,7 +2202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07510570a764674cb66a6774b3014a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  semrukKutEnabled: 0
+  semrukKutEnabled: 1
+  regenAmount: 5
+  regenTimePeriod: 2
 --- !u!114 &1580827376
 MonoBehaviour:
   m_ObjectHideFlags: 0
