@@ -12,6 +12,7 @@ public class TestRanged : RangedEnemy
 
     public override void Die()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        Debug.Log("ZOrt");
     }
 }
