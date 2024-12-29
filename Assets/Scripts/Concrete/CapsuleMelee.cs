@@ -9,6 +9,8 @@ public class CapsuleMelee : MeleeEnemy
 
     public override void Die()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
+        
+        isDead = true;
     }
 }

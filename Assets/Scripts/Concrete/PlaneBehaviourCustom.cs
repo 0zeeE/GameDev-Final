@@ -5,6 +5,7 @@ using DynamicMeshCutter;
 public class PlaneBehaviourCustom : CutterBehaviour
 {
     public float DebugPlaneLength = 2;
+    [SerializeField] private KizaganKilic kilic;
 
     [ContextMenu("Rammus")]
     public void Cut()
@@ -16,12 +17,20 @@ public class PlaneBehaviourCustom : CutterBehaviour
                 continue;
             if(root.GetComponent<Enemy>() != null && root.GetComponent<Enemy>().isCloseToPlayer)
             {
-                root.GetComponent<Enemy>().Die();
-                var targets = root.GetComponentsInChildren<MeshTarget>();
-                foreach (var target in targets)
+                if(root.GetComponent<Enemy>().canSliceEnemy)
                 {
-                    Cut(target, transform.position, transform.forward, null, OnCreated);
+                    root.GetComponent<Enemy>().Die();
+                    var targets = root.GetComponentsInChildren<MeshTarget>();
+                    foreach (var target in targets)
+                    {
+                        Cut(target, transform.position, transform.forward, null, OnCreated);
+                    }
                 }
+                else
+                {
+                    root.GetComponent<Enemy>().TakeDamage(kilic.swordDamage);
+                }
+                
             }
             
         }

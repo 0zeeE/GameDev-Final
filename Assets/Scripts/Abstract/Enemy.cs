@@ -13,6 +13,7 @@ public abstract class Enemy : MonoBehaviour
     public Animator enemyAnim;
     public Transform player;
     public bool isCloseToPlayer;
+    public bool canSliceEnemy = false;
     public GameObject enemyWeapon;
 
     //Enemy Navigation
