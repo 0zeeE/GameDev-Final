@@ -25,6 +25,8 @@ public class Hovl_Laser2 : MonoBehaviour
     private float dissovleTimer = 0;
     private bool startDissovle = false;
 
+    public float laserDamage = 15f;
+
     void Start()
     {
         laserPS = GetComponent<ParticleSystem>();
@@ -66,6 +68,14 @@ public class Hovl_Laser2 : MonoBehaviour
                     {
                         if (!AllFlashes.isPlaying) AllFlashes.Play();
                     }
+                }
+                if(hit.collider.GetComponent<Enemy>() != null)
+                {
+                    hit.collider.GetComponent<Enemy>().TakeDamage(laserDamage * Time.deltaTime);
+                }
+                if(hit.collider.GetComponent<BreakableObject>() != null)
+                {
+                    hit.collider.GetComponent<BreakableObject>().TakeDamage();
                 }
             }
             else
