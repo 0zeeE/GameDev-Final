@@ -8,6 +8,7 @@ public abstract class RangedEnemy : Enemy
     public AudioSource shootSound;
     public GameObject projectile;
     public float projectileSpeed = 32f;
+    public float inaccuracyAmount = 0.1f;
     public override void AttackPlayer()
     {
         agent.SetDestination(transform.position);
@@ -24,7 +25,7 @@ public abstract class RangedEnemy : Enemy
 
             }
 
-            Vector3 randomTransform = new Vector3(Random.Range(-0.20f, 0.20f), Random.Range(-0.20f, 0.20f), Random.Range(-0.20f, 0.20f));
+            Vector3 randomTransform = new Vector3(Random.Range(-inaccuracyAmount, inaccuracyAmount), Random.Range(-inaccuracyAmount, inaccuracyAmount), Random.Range(-inaccuracyAmount, inaccuracyAmount));
             Rigidbody rb = Instantiate(projectile, weaponAttackPoint.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce((weaponAttackPoint.transform.forward + randomTransform) * projectileSpeed, ForceMode.Impulse);
             rb.AddForce(weaponAttackPoint.transform.up * 1f, ForceMode.Impulse);

@@ -22,6 +22,7 @@ public class Hovl_DemoLasers : MonoBehaviour
     private GameObject Instance;
     private Hovl_Laser LaserScript;
     private Hovl_Laser2 LaserScript2;
+    public bool sunMode = true;
 
     //Double-click protection
     private float buttonSaver = 0f;
@@ -38,7 +39,7 @@ public class Hovl_DemoLasers : MonoBehaviour
     void Update()
     {
         //Enable lazer
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && sunMode)
         {
             Destroy(Instance);
             Instance = Instantiate(Prefabs[Prefab], FirePoint.transform.position, FirePoint.transform.rotation);

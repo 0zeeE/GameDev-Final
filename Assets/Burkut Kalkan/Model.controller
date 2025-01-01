@@ -62,7 +62,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
+  - m_ConditionMode: 1
     m_ConditionEvent: Switch
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -127,7 +127,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
+  - m_ConditionMode: 2
     m_ConditionEvent: Switch
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -155,17 +155,17 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7621114395421372508}
-    m_Position: {x: 360, y: -240, z: 0}
+    m_Position: {x: 330, y: -420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8326384918835869172}
-    m_Position: {x: 360, y: -400, z: 0}
+    m_Position: {x: 330, y: -210, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 370, y: -80, z: 0}
+  m_EntryPosition: {x: 350, y: -80, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -7621114395421372508}
+  m_DefaultState: {fileID: -8326384918835869172}
