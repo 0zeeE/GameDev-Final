@@ -19,7 +19,7 @@ public class BurkutShield : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.R))
         {
-            SwitchType();
+            SwitchType();   
         }
     }
 
