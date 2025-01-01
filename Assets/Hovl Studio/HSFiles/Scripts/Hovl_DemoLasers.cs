@@ -96,11 +96,11 @@ public class Hovl_DemoLasers : MonoBehaviour
     }
 
     //GUI Text
-    void OnGUI()
-    {
-        GUI.Label(new Rect(10 * windowDpi, 5 * windowDpi, 400 * windowDpi, 20 * windowDpi), "Use the keyboard buttons A/<- and D/-> to change lazers!");
-        GUI.Label(new Rect(10 * windowDpi, 20 * windowDpi, 400 * windowDpi, 20 * windowDpi), "Use left mouse button for shooting!");
-    }
+    //void OnGUI()
+    //{
+    //    GUI.Label(new Rect(10 * windowDpi, 5 * windowDpi, 400 * windowDpi, 20 * windowDpi), "Use the keyboard buttons A/<- and D/-> to change lazers!");
+    //    GUI.Label(new Rect(10 * windowDpi, 20 * windowDpi, 400 * windowDpi, 20 * windowDpi), "Use left mouse button for shooting!");
+    //}
 
     //To change prefabs (count - prefab number)
     void Counter(int count)
