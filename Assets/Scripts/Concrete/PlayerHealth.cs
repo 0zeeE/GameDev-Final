@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     private FirstPersonController fpsController;
     private Rigidbody rb;
     public bool isDead = false;
+    public Image healthImage;
 
     void Start()
     {
@@ -24,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
         //{
         //    Die();
         //}
+        UpdateHealthBar();
     }
 
     public void TakeDamage(float damage)
@@ -75,5 +79,9 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+    }
+    private void UpdateHealthBar()
+    {
+        healthImage.fillAmount = currentHealth / maxHealth;
     }
 }
