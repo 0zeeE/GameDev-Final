@@ -3272,6 +3272,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5
+--- !u!1001 &2106776349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.94
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.817563
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ed81c6104f3da14892b6cc20aa549d5, type: 2}
+    - target: {fileID: 919132149155446097, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
+      propertyPath: m_Name
+      value: Ancient_stone_deer_sk_0102010617_refine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38eb0cbc2669b4940b18885f52e02f48, type: 3}
 --- !u!1 &1776473445385868
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,3 +4026,4 @@ SceneRoots:
   - {fileID: 711873913}
   - {fileID: 2024482060}
   - {fileID: 4779762334240427013}
+  - {fileID: 2106776349}
