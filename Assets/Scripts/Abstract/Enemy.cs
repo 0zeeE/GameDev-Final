@@ -138,5 +138,10 @@ public abstract class Enemy : MonoBehaviour
         alreadyAttacked = false;
     }
 
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
 
 }

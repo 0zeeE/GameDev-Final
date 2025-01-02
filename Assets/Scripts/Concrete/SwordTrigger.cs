@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SwordTrigger : MonoBehaviour
 {
-    public bool isSwinging = false;
     float damage;
     [SerializeField] private BasicSword sword;
     // Start is called before the first frame update
@@ -22,7 +21,7 @@ public class SwordTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy" && isSwinging)
+        if (other.tag == "Enemy")
         {
             other.GetComponent<Enemy>().TakeDamage(damage);
         }

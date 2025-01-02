@@ -6,12 +6,11 @@ public class BasicSword : MonoBehaviour
 {
     [SerializeField] private Animator swordAnim;
     public float swordDamage = 20f;
-    [SerializeField] private SwordTrigger swordTrig;
+    [SerializeField] private GameObject swordCollider;
     // Start is called before the first frame update
     void Start()
     {
         swordAnim = GetComponentInChildren<Animator>();
-        swordTrig = GetComponentInChildren<SwordTrigger>();
     }
 
     // Update is called once per frame
@@ -20,14 +19,22 @@ public class BasicSword : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             swordAnim.SetBool("IsSwinging", true);
-            swordTrig.isSwinging = true;
         }
         else
         {
             swordAnim.SetBool("IsSwinging", false);
-            swordTrig.isSwinging = false;
 
         }
+    }
+
+    public void OpenTrigger()
+    {
+        swordCollider.SetActive(true);
+    }
+
+    public void CloseTrigger()
+    {
+        swordCollider.SetActive(false);
     }
 
    
