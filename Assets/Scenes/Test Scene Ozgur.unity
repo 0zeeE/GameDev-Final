@@ -2988,6 +2988,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991029212}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2004699220
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.311602
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.073917
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_Name
+      value: Lesser Demon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4479170270689a148b387818dd43735b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6ef0a5d7ded834d4e9996eb04e2e3942, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4479170270689a148b387818dd43735b, type: 3}
 --- !u!1001 &2024482060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3498,6 +3559,18 @@ PrefabInstance:
     - target: {fileID: 5040127123723265405, guid: b8fc6db36b6447544a177e8c06057a86, type: 3}
       propertyPath: canSliceEnemy
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169645375236245883, guid: b8fc6db36b6447544a177e8c06057a86, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'Knee_R'\n\tTransform 'MiddleFinger2_R'\n\tTransform
+        'Wrist_L'\n\tTransform 'MiddleFinger3_L'\n\tTransform 'MiddleFinger1_R'\n\tTransform
+        'Hip_R'\n\tTransform 'MiddleFinger1_L'\n\tTransform 'Toes_L'\n\tTransform
+        'Elbow_R'\n\tTransform 'Ankle_L'\n\tand more ...\n\tFrom animation clip 'mixamo.com'\n\tFrom
+        animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation
+        clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip
+        'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4212,3 +4285,4 @@ SceneRoots:
   - {fileID: 4779762334240427013}
   - {fileID: 2024482060}
   - {fileID: 2090731928}
+  - {fileID: 2004699220}
