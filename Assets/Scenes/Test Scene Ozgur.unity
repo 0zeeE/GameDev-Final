@@ -2931,7 +2931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6684670646706775411, guid: 3480660ab152b0841ba64cc96f9a7d7b, type: 3}
       propertyPath: m_Name
-      value: HealthCanvas
+      value: PlayerCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3510,6 +3510,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8718553716614425062, guid: 5b70ffcc7a76d0740b9d8832dcecbf1b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718553716614425062, guid: 5b70ffcc7a76d0740b9d8832dcecbf1b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4024,6 +4032,6 @@ SceneRoots:
   - {fileID: 512820719}
   - {fileID: 1330668572}
   - {fileID: 711873913}
-  - {fileID: 2024482060}
   - {fileID: 4779762334240427013}
   - {fileID: 2106776349}
+  - {fileID: 2024482060}
