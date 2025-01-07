@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonWithSword : Enemy
+public class SkeletonWithSword : MeleeEnemy
 {
     public override void Update()
     {
@@ -42,10 +42,12 @@ public class SkeletonWithSword : Enemy
     {
         Debug.Log("Attack baþladý!");
         agent.SetDestination(transform.position);
-        transform.LookAt(player);
+
 
         if (!alreadyAttacked)
         {
+            transform.LookAt(player);
+            enemyWeapon.GetComponent<EnemyMelee>().OpenCollider();
             int attackType = Random.Range(0, 2); // 0 = Attack1, 1 = Attack2, 2 = PowerAttack
 
             switch (attackType)
