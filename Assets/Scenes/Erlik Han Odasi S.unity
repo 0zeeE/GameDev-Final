@@ -1343,6 +1343,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b70ffcc7a76d0740b9d8832dcecbf1b, type: 3}
+--- !u!114 &54706271 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8505722968385528870, guid: 5b70ffcc7a76d0740b9d8832dcecbf1b, type: 3}
+  m_PrefabInstance: {fileID: 54706270}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &58726529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7507,9 +7518,13 @@ PrefabInstance:
       propertyPath: enemyDamage
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1319093608156220633, guid: ec7aebba6ad226a42819ee42a279bbad, type: 3}
+      propertyPath: healthImage
+      value: 
+      objectReference: {fileID: 54706271}
     - target: {fileID: 2711657482025532277, guid: ec7aebba6ad226a42819ee42a279bbad, type: 3}
       propertyPath: radius
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3572044721069124404, guid: ec7aebba6ad226a42819ee42a279bbad, type: 3}
       propertyPath: m_LocalScale.x

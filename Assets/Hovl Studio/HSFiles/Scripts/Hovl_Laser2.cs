@@ -25,7 +25,7 @@ public class Hovl_Laser2 : MonoBehaviour
     private float dissovleTimer = 0;
     private bool startDissovle = false;
 
-    public float laserDamage = 15f;
+    public float laserDamage = 35f;
 
     void Start()
     {

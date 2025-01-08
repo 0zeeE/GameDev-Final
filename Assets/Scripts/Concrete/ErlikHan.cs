@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ErlikHan : MeleeEnemy
 {
+    public Image healthImage;
+
     public override void Update()
     {
         base.CheckPlayerState();
@@ -96,6 +100,7 @@ public class ErlikHan : MeleeEnemy
         if (!isDead)
         {
             enemyAnim.SetTrigger("Hit");
+            UpdateHealthBar();
         }
     }
 
@@ -110,5 +115,10 @@ public class ErlikHan : MeleeEnemy
             agent.enabled = false;
             Destroy(gameObject, 5f); // Ölümden sonra 5 saniye sonra yok et
         }
+    }
+
+    public void UpdateHealthBar()
+    {
+        healthImage.fillAmount = GetCurrentHealth() / MaxHealth;
     }
 }

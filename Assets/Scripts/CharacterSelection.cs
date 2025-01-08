@@ -43,15 +43,15 @@ public class CharacterSelect : MonoBehaviour
         //SceneManager.LoadScene("First Scene");
         if(selectedCharacter == 0)
         {
-            SceneManager.LoadScene("Kat 7-8 Mergen");
+            SceneManager.LoadScene("Kat 7-8 M");
         }
         if(selectedCharacter == 1)
         {
-            SceneManager.LoadScene("Kat 7-8 Kizagan");
+            SceneManager.LoadScene("Kat 7-8 K");
         }
         if(selectedCharacter == 2)
         {
-            SceneManager.LoadScene("Kat 7-8 Semruk");
+            SceneManager.LoadScene("Kat 7-8 S");
         }
         
     }

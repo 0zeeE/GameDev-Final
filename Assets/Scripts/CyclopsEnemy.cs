@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class CyclopsEnemy : Enemy
@@ -105,6 +107,7 @@ public class CyclopsEnemy : Enemy
             agent.enabled = false;
             isDead = true;
             enemyAnim.SetTrigger("Death");
+            Invoke(nameof(nextLevel), 5f);
             Destroy(gameObject, 5f); // Ölümden sonra 5 saniye sonra yok et
         }
     }
@@ -112,6 +115,13 @@ public class CyclopsEnemy : Enemy
     public void UpdateHealthBar()
     {
         healthImage.fillAmount = GetCurrentHealth() / MaxHealth;
+    }
+
+    private void nextLevel()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().lockCursor = false;
+
+        SceneManager.LoadScene("Cutscene3");
     }
 }
 
