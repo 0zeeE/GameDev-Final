@@ -20,6 +20,7 @@ public class EnemyMelee : MonoBehaviour
         if(other.tag == "Player")
         {
             other.GetComponent<PlayerHealth>().TakeDamage(damage);
+            OpenCollider();
         }
     }
 
