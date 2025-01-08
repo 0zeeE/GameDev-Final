@@ -25,7 +25,7 @@ public class MergenKut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L) && mergenKutEnabled == true)
+        if (Input.GetKeyDown(KeyCode.R) && mergenKutEnabled == true)
         {
             Skill();
         }

@@ -7,6 +7,8 @@ public class BasicSword : MonoBehaviour
     [SerializeField] private Animator swordAnim;
     public float swordDamage = 20f;
     [SerializeField] private GameObject swordCollider;
+    [SerializeField] private bool canAttack = true;
+    [SerializeField] private MeshRenderer swordMesh;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class BasicSword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && canAttack)
         {
             swordAnim.SetBool("IsSwinging", true);
         }
@@ -36,6 +38,19 @@ public class BasicSword : MonoBehaviour
     {
         swordCollider.SetActive(false);
     }
+    public void CloseSword()
+    {
+        swordAnim.Play("Idle");
+        swordMesh.enabled = false;
+        canAttack = false;
+        
+    }
 
-   
+    public void OpenSword()
+    {
+        swordMesh.enabled = true;
+        canAttack = true;
+    }
+
+
 }
