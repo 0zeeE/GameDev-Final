@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class CyclopsEnemy : Enemy
 {
@@ -7,7 +9,7 @@ public class CyclopsEnemy : Enemy
     public float roarRange = 15f; // Roar için oyuncunun menzili
     public float roarCooldown = 10f; // Roar yapabileceði süre aralýðý
     private bool canRoar = true;
-
+    public Image healthImage;
     public override void Update()
     {
         base.CheckPlayerState();
@@ -92,6 +94,7 @@ public class CyclopsEnemy : Enemy
         if (!isDead)
         {
             enemyAnim.SetTrigger("Hit");
+            UpdateHealthBar();
         }
     }
 
@@ -104,6 +107,11 @@ public class CyclopsEnemy : Enemy
             agent.enabled = false;
             Destroy(gameObject, 5f); // Ölümden sonra 5 saniye sonra yok et
         }
+    }
+
+    public void UpdateHealthBar()
+    {
+        healthImage.fillAmount = GetCurrentHealth() / MaxHealth;
     }
 }
 
