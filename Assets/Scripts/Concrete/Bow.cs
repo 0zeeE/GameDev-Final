@@ -11,6 +11,8 @@ public class Bow : MonoBehaviour
     private Animator bowAnimator;
     public GameObject[] arrowVisual;
     public bool isBowActive = true;
+    [SerializeField] private SkinnedMeshRenderer bowMesh;
+    [SerializeField] private GameObject[] smallParts;
 
     void Start()
     {
@@ -39,14 +41,22 @@ public class Bow : MonoBehaviour
     {
         foreach (GameObject gm in arrowVisual)
         {
-            gm.GetComponent<MeshRenderer>().enabled = false;
+            if(gm.GetComponent<MeshRenderer>() != null)
+            {
+                gm.GetComponent<MeshRenderer>().enabled = false;
+
+            }
         }
 
         yield return new WaitForSeconds(0f);
 
         foreach (GameObject gm in arrowVisual)
         {
-            gm.GetComponent<MeshRenderer>().enabled = true;
+            if (gm.GetComponent<MeshRenderer>() != null)
+            {
+                gm.GetComponent<MeshRenderer>().enabled = true;
+
+            }
         }
     }
 
@@ -77,10 +87,23 @@ public class Bow : MonoBehaviour
 
     public void BowSwitch(bool param)
     {
-        
+        bowAnimator.Play("Idle");
         isBowActive = param;
         bowAnimator.enabled = param;
-        bowAnimator.Play("Idle");
+
+        bowMesh.enabled = param;
+        foreach (GameObject parts in arrowVisual)
+        {
+            parts.SetActive(param);
+        }
+        foreach(GameObject parts in smallParts)
+        {
+            parts.SetActive(param);
+        }
+
+
+
+
     }
 
 
