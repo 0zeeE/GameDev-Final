@@ -18,15 +18,15 @@ public class CyclopsEnemy : Enemy
         {
             Roar();
         }
-        else if (!playerInSightRange && !playerInAttackRange)
+        else if (!isDead && !playerInSightRange && !playerInAttackRange)
         {
             Patrol(); // Devriye fonksiyonu
         }
-        else if (playerInSightRange && !playerInAttackRange)
+        else if (!isDead && playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer(); // Oyuncuyu kovala
         }
-        else if (playerInSightRange && playerInAttackRange)
+        else if (!isDead && playerInSightRange && playerInAttackRange)
         {
             AttackPlayer(); // Oyuncuya saldýr
         }
@@ -102,9 +102,9 @@ public class CyclopsEnemy : Enemy
     {
         if (!isDead)
         {
+            agent.enabled = false;
             isDead = true;
             enemyAnim.SetTrigger("Death");
-            agent.enabled = false;
             Destroy(gameObject, 5f); // Ölümden sonra 5 saniye sonra yok et
         }
     }
