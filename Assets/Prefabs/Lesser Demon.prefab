@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8260812105328656450}
   - component: {fileID: 8763624132587297527}
   - component: {fileID: 6339445572903565316}
+  - component: {fileID: 7107209679889715017}
   m_Layer: 0
   m_Name: Lesser Demon
   m_TagString: Untagged
@@ -135,7 +136,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 8260812105328656450}
   player: {fileID: 0}
   isCloseToPlayer: 0
-  canSliceEnemy: 0
+  canSliceEnemy: 1
   enemyWeapon: {fileID: 4765020554326897332}
   agent: {fileID: 5508571281758893711}
   whatIsGround:
@@ -156,7 +157,20 @@ MonoBehaviour:
   isEnemyMustStay: 0
   isEnemyCanChase: 0
   meleeWeapon: {fileID: 3020035272828115580}
-  enemyDamage: 1
+  enemyDamage: 10
+--- !u!114 &7107209679889715017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4336943930210093582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d24dfc0882373449964a8b390829cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 6
 --- !u!1001 &3641867264927864961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -405,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponCollider: {fileID: 7533599563828456238}
+  isTriggerOpen: 0
 --- !u!65 &7533599563828456238
 BoxCollider:
   m_ObjectHideFlags: 0

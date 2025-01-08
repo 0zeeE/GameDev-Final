@@ -252,10 +252,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153d2d3455fe2144a8b7495ac24ac7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  MaxHealth: 1000
   currentHealth: 0
   isDead: 0
-  moveSpeed: 10
+  moveSpeed: 15
   enemyAnim: {fileID: 7454125246759547214}
   player: {fileID: 0}
   isCloseToPlayer: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   walkPointRange: 20
   timeBetweenAttacks: 2
   alreadyAttacked: 0
-  sightRange: 20
+  sightRange: 50
   attackRange: 3
   playerInSightRange: 0
   playerInAttackRange: 0
