@@ -40,7 +40,20 @@ public class CharacterSelect : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        SceneManager.LoadScene("First Scene");
+        //SceneManager.LoadScene("First Scene");
+        if(selectedCharacter == 0)
+        {
+            SceneManager.LoadScene("Kat 7-8 Mergen");
+        }
+        if(selectedCharacter == 1)
+        {
+            SceneManager.LoadScene("Kat 7-8 Kizagan");
+        }
+        if(selectedCharacter == 2)
+        {
+            SceneManager.LoadScene("Kat 7-8 Semruk");
+        }
+        
     }
 
     private void UpdateCharacterInfo()
