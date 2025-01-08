@@ -10,43 +10,133 @@ public class PlayerInventory : MonoBehaviour
 
     [SerializeField] private Bow defaultBow;
     [SerializeField] private Bow mergenBow;
+    [SerializeField] private GameObject basicSword;
+    [SerializeField] private GameObject kizaganKilic;
+    [SerializeField] private GameObject burkutKalkan;
 
     //kilic ve kalkani yaptiktan sonra buraya gel.
 
-    void Start()
+    private void Awake()
     {
         mergenKut = GetComponent<MergenKut>();
         kizaganKut = GetComponent<KizaganKut>();
         semrukKut = GetComponent<SemrukBurkutKut>();
     }
+    void Start()
+    {
+        InitialiseInventory();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void InitializeInventory()
-    {
-        if(mergenKut.mergenKutEnabled)
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            //DefaultBow kendisini kapatacak. Mergen yayi acik olacak. Diger kilic ve kalkanlarda da ayni istem yapilacak.
-            defaultBow.BowSwitch();
-            
+            SwitchPrimary();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwitchSecondary();
         }
     }
 
-    public void SwitchtoBow()
-    {
-        if (mergenKut.mergenKutEnabled)
-        {
-            //DefaultBow kendisini kapatacak. Mergen yayi acik olacak. Diger kilic ve kalkanlarda da ayni istem yapilacak.
-            mergenBow.BowSwitch();
 
+
+    public void SwitchPrimary()
+    {
+        if (semrukKut.semrukKutEnabled == false)
+        {
+            if(kizaganKut.kizaganKutEnabled)
+            {
+                defaultBow.BowSwitch(false);
+                
+                kizaganKilic.GetComponent<KizaganKilic>().OpenSword();
+
+            }
+            else if(mergenKut.mergenKutEnabled)
+            {
+                mergenBow.BowSwitch(false);
+                basicSword.GetComponent<BasicSword>().OpenSword();
+
+            }
+            else
+            {
+                defaultBow.BowSwitch(false);
+            
+                basicSword.GetComponent<BasicSword>().OpenSword();
+
+            }
+        }
+
+    }
+
+    public void SwitchSecondary()
+    {
+        if (semrukKut.semrukKutEnabled == false)
+        {
+            if (kizaganKut.kizaganKutEnabled)
+            {
+                defaultBow.BowSwitch(true);
+                
+                kizaganKilic.GetComponent<KizaganKilic>().CloseSword();
+
+            }
+            else if (mergenKut.mergenKutEnabled)
+            {
+                mergenBow.BowSwitch(true);
+                basicSword.GetComponent<BasicSword>().CloseSword();
+            }
+            else
+            {
+                defaultBow.BowSwitch(true);
+                basicSword.GetComponent<BasicSword>().CloseSword();
+
+            }
+        }
+    }
+
+    public void InitialiseInventory()
+    {
+        if(semrukKut.semrukKutEnabled)
+        {
+            burkutKalkan.SetActive(true);
+
+            basicSword.GetComponent<BasicSword>().CloseSword();
+            kizaganKilic.GetComponent<KizaganKilic>().CloseSword();
+            defaultBow.BowSwitch(false);
+            mergenBow.BowSwitch(false);
+
+
+        }
+        else if(mergenKut.mergenKutEnabled)
+        {
+            burkutKalkan.SetActive(false);
+            defaultBow.BowSwitch(false);
+
+            mergenBow.BowSwitch(true);
+
+            basicSword.GetComponent<BasicSword>().CloseSword();
+            kizaganKilic.GetComponent<KizaganKilic>().CloseSword();
+        }
+        else if(kizaganKut.kizaganKutEnabled)
+        {
+            burkutKalkan.SetActive(false);
+
+            mergenBow.BowSwitch(false);
+            defaultBow.BowSwitch(false);
+
+            basicSword.GetComponent<BasicSword>().CloseSword();
+            kizaganKilic.GetComponent<KizaganKilic>().OpenSword();
         }
         else
         {
-            defaultBow.BowSwitch();
+            burkutKalkan.SetActive(false);
+
+            mergenBow.BowSwitch(false);
+            defaultBow.BowSwitch(true);
+
+            basicSword.GetComponent<BasicSword>().CloseSword();
+            kizaganKilic.GetComponent<KizaganKilic>().CloseSword();
         }
     }
 }

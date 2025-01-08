@@ -134,7 +134,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25445611}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f2cff54a318a274db1d75de70b86e8c, type: 3}
   m_Name: 
@@ -146,6 +146,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 25445614}
   player: {fileID: 2080578368}
   isCloseToPlayer: 0
+  canSliceEnemy: 0
   enemyWeapon: {fileID: 0}
   agent: {fileID: 0}
   whatIsGround:
@@ -169,6 +170,8 @@ MonoBehaviour:
   shootSound: {fileID: 0}
   projectile: {fileID: 0}
   projectileSpeed: 32
+  inaccuracyAmount: 0.1
+  healthImage: {fileID: 0}
 --- !u!95 &25445614 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4202665322815760769, guid: 586d307e7850d07459caa381023b03cb, type: 3}
@@ -181,7 +184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25445611}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0d24dfc0882373449964a8b390829cb, type: 3}
   m_Name: 
@@ -2150,7 +2153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7832587738631435259, guid: 586d307e7850d07459caa381023b03cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9
+      value: 2.53
       objectReference: {fileID: 0}
     - target: {fileID: 7832587738631435259, guid: 586d307e7850d07459caa381023b03cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2158,7 +2161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7832587738631435259, guid: 586d307e7850d07459caa381023b03cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.23
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 7832587738631435259, guid: 586d307e7850d07459caa381023b03cb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2982,6 +2985,10 @@ PrefabInstance:
     - target: {fileID: 7492056427050346817, guid: 586d307e7850d07459caa381023b03cb, type: 3}
       propertyPath: m_Name
       value: DMC_Man_TPose
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492056427050346817, guid: 586d307e7850d07459caa381023b03cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7832587738631435259, guid: 586d307e7850d07459caa381023b03cb, type: 3}
       propertyPath: m_LocalPosition.x

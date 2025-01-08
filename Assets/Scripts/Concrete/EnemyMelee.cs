@@ -7,12 +7,12 @@ public class EnemyMelee : MonoBehaviour
     // Start is called before the first frame update
     private float damage = 15f;
     [SerializeField] private Collider weaponCollider;
-    
+    [SerializeField] private bool isTriggerOpen = false;
 
     void Start()
     {
         weaponCollider = GetComponent<Collider>();
-        weaponCollider.isTrigger = false;
+        weaponCollider.isTrigger = isTriggerOpen;
     }
 
     private void OnTriggerEnter(Collider other)
