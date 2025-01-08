@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Bull : MeleeEnemy
 {
+    public override void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        base.Start();
+
+    }
     public override void Update()
     {
         base.CheckPlayerState();
 
-        if (!playerInSightRange && !playerInAttackRange)
+        if (!isDead && !playerInSightRange && !playerInAttackRange)
         {
             Patrol(); // Devriye fonksiyonu
         }
-        else if (playerInSightRange && !playerInAttackRange)
+        else if (!isDead && playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer(); // Oyuncuyu kovala
         }
-        else if (playerInSightRange && playerInAttackRange)
+        else if (!isDead && playerInSightRange && playerInAttackRange)
         {
             AttackPlayer(); // Oyuncuya saldýr
         }

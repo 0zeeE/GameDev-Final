@@ -9,15 +9,15 @@ public class LesserDemon : MeleeEnemy
     {
         base.CheckPlayerState();
 
-        if (!playerInSightRange && !playerInAttackRange)
+        if (!isDead && !playerInSightRange && !playerInAttackRange)
         {
             Patrol(); // Devriye fonksiyonu
         }
-        else if (playerInSightRange && !playerInAttackRange)
+        else if (!isDead && playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer(); // Oyuncuyu kovala
         }
-        else if (playerInSightRange && playerInAttackRange)
+        else if (!isDead && playerInSightRange && playerInAttackRange)
         {
             AttackPlayer(); // Oyuncuya saldýr
         }

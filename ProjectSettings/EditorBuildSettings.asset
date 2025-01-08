@@ -8,4 +8,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/First Scene.unity
     guid: bd69a756f7454e9419405811fef86d65
+  - enabled: 1
+    path: Assets/Scenes/Yer Alti Katlari/Kat 7-8 K.unity
+    guid: b7529eeffc9f7ab44aa141d3d373c0b2
+  - enabled: 1
+    path: Assets/Scenes/Yer Alti Katlari/Kat 7-8 M.unity
+    guid: e11e60e8c11c6894c9f1a533ba8b391d
+  - enabled: 1
+    path: Assets/Scenes/Yer Alti Katlari/Kat 7-8 S.unity
+    guid: 61a62a13e23f3344295b9078f52c2025
+  - enabled: 1
+    path: Assets/Scenes/Gok Scene.unity
+    guid: ee16a7b59dde46f4c91c8ded59dffe36
+  - enabled: 1
+    path: Assets/Scenes/Gok 5 Scene.unity
+    guid: bbe1683ea50b0be4d919feab0d075ba4
+  - enabled: 1
+    path: Assets/Scenes/Erlik Han Odasi S.unity
+    guid: d8f1ef0e0145a0f46aa84fdba81fbb02
+  - enabled: 1
+    path: Assets/Scenes/Erlik Han Odasi K.unity
+    guid: dd171553dfa42e148890f8257b746bed
+  - enabled: 1
+    path: Assets/Scenes/Erlik Han Odasi M.unity
+    guid: 3a1ba87297355c54eb8d1d72b353eae5
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: 8b95eeceb666edd4e8a912304c2c3102
   m_configObjects: {}
